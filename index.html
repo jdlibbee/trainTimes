@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Libbee's Station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2"></div>
+            <div class="col-md-8">
+                <div class="jumbotron jumbotron-fluid bg-dark">
+                    <div class="container">
+                        <h1 class="display-4 text-center text-white">Libbee's Station</h1>
+                        <p class="lead text-white text-center">Train Schedule to Keep You on Time!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border border-primary">
+                    <div class="card-body">
+                        <div class="card-header bg-primary text-white">
+                            Current Schedule
+                        </div>
+                        <table class="table table-hover" id=trainData>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-md-2">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body border border-primary">
+                        <div class="card-header bg-primary text-white" id="addTrain">
+                            Add Train
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="name-input">Train name</label>
+                                <input type="text" class="form-control" id="trainName" aria-describedby="trainName" placeholder="Train">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination-input">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="Destination">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstTrain-input">First Train (HH:mm - mlitary time)</label>
+                                <input type="text" class="form-control" id="firstTrain" placeholder="00:00">
+                            </div>
+                            <div class="form-group">
+                                <label for="monthlyRate-input">Frequency (min)</label>
+                                <input type="number" class="form-control" id="frequency" placeholder="0 min">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="assets/java/action.js"></script>
+
+
+</html>

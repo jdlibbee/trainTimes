@@ -1,0 +1,8 @@
+body {
+    background: url(../images/station.jpg); 
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.container{
+    font-family: 'Teko', sans-serif;
+}
